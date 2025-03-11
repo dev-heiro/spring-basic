@@ -9,7 +9,7 @@ import org.springframework.web.HttpRequestHandler;
 import java.io.IOException;
 
 
-@Component("/help")
+@Component("help")
 public class HelpHandler implements HttpRequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
