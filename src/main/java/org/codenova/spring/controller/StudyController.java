@@ -28,6 +28,8 @@ public class StudyController {
 
         HttpSession s = req.getSession();
         System.out.println(s == session);
+        String id =req.getParameter("id");
+
     }
 
     /*
