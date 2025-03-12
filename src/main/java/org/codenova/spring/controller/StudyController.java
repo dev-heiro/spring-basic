@@ -25,6 +25,7 @@ public class StudyController {
      */
     @RequestMapping("/one")
     public void studyOneHandle(HttpServletRequest req, HttpServletResponse resp, HttpSession session) {
+
         HttpSession s = req.getSession();
         System.out.println(s == session);
     }
@@ -37,12 +38,10 @@ public class StudyController {
     @RequestMapping("/two")
     public String studyTwoHandle(Model model) {
         System.out.println("StudyController.studyTwoHandle()");
-
         model.addAttribute("msg", "Hello Spring");
 
         return "study/two";
     }
-
     /*
         @RequestParam : 특정파라마티를 바로 추출하고자 할때
      */
@@ -52,6 +51,5 @@ public class StudyController {
         System.out.println("code = " + code);
         System.out.println("size = " + size);
     }
-
 
 }
