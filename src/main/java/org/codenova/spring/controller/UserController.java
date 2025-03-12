@@ -10,13 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @RequestMapping("/join")
-    public ModelAndView joinHandle() {
+    public void joinHandle() {
         System.out.println("UserController.joinHandle");
 
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("user/join");
-
-        return mav;
     }
 
     @RequestMapping("/join/proceed")
