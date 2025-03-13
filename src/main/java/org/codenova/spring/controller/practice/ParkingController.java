@@ -1,5 +1,6 @@
 package org.codenova.spring.controller.practice;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +18,11 @@ public class ParkingController {
 
     @RequestMapping("/calculate")
     public String calculateHandle(@RequestParam("car") String car,
+                                  Model model,
                                   @RequestParam("minutes") int minutes,
-                                  @RequestParam("purchase") int purchase,
-                                  Model model) {
+                                  HttpSession session,
+                                  @RequestParam("purchase") int purchase
+                                  ) {
 
         int chargeMinutes = minutes;
         if (purchase >= 100000) {
