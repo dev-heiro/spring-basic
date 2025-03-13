@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Setter
 @Getter
 @ToString
@@ -18,7 +17,6 @@ public class TravelSchedule {
     private int foodCost;
 
     private boolean planned;
-
 
 
 }
